@@ -2,23 +2,26 @@
 #include<vector>
 using namespace std;
 
-int n;
-int m;
+int filas;
+int columnas;
 
 int main(){
-    cin >> n >> m;
-    int mat[m][n];
-    for(int i = 0; i < n; ++i){
-        for(int j = 0; j < m; ++j){
-            cin >> mat[j][i];
-            //cout << j << " " << i << endl;
+    cin >> filas >> columnas;
+    int mat[filas][columnas];
+    int mat2[columnas][filas];
+    for(int i = 0; i < filas; ++i){
+        for(int j = 0; j < columnas; ++j){
+            cin >> mat[i][j];
+            mat2[j][i] = mat[i][j];
         }
     }
-    for(int i = 0; i < n; ++i){
-        for(int j = 0; j < m; ++j){
-            cout << mat[i][j] << " ";
+
+
+
+    for(int i = 0; i < columnas; ++i){
+        for(int j = 0; j < filas; ++j){
+            cout << mat2[i][j] << " ";
         }
         cout << endl;
-
     }
 }

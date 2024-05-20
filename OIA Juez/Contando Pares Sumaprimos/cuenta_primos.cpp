@@ -1,15 +1,12 @@
-#include<iostream>
-#include<vector>
+#include<bits/stdc++.h>
 using namespace std;
 
 int x;
 int c;
-int o;
-int o2;
-bool del;
+vector<int> result;
 
 bool isPrime(int a){
-    for(int i = 0; i < a; ++i){
+    for(int i = 2; i < a; ++i){
         if(a % i == 0) return false;
     }
     return true;
@@ -17,30 +14,26 @@ bool isPrime(int a){
 
 int main(){
     cin >> x;
-    vector<int> l(x);
+    vector<int> lista(x);
 
-    for(int i = 0; i < x; ++i)
-        cin >> l[i];
+    for(int i = 0; i < x; ++i) cin >> lista[i];
 
     for(int i = 0; i < x; ++i){
-
-        if(del){
-            if(i == o || i == o2) i++;
-            del = false;
-        }
-
-        for(int j = i + 1; j < x; ++j){
-            if(isPrime(i + j)){
-                ++c;
-                del = true;
-                o = j;
-                o2 = i;
-                cout << o << j << "  " << o2 << i << endl;
-                break;
+            if(x == 1 && isPrime(lista[0])) c++;
+        for(int j = 0; j < x; ++j){
+            if(isPrime(lista[i] + lista[j])){
+                c++;
             }
         }
     }
-    cout << c;
+    cout << c/2;
 }
+/*
+4
+10
+9
+2
+3
+*/
 
 
