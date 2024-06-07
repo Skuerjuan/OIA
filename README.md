@@ -1,2 +1,2 @@
--Ejercicios de la Olimpíada de Informática Argentina, sacados de la página de juez.oia.unsam.edu.ar o de cses.fi
--Resueltos por Felipe Maierowicz en C++
+-Ejercicios de las Olimpíadas de Informática, sacados de la página de juez.oia.unsam.edu.ar o de cses.fi
+-Resueltos por Felipe Maierowicz en C++, Buenos Aires, Argentina

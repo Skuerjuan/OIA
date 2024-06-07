@@ -14,7 +14,7 @@ int main(){
 
     if(originalText.is_open()){
         while(getline(originalText, line)){
-            cout << line << endl;
+            cout << "3";
         }
     }
 }
